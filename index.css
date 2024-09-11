@@ -1,0 +1,309 @@
+/* Background color change with gradient */
+body {
+    background: linear-gradient(to right, #1e3c72, #7299dc);
+    font-family: 'Comic Sans MS', sans-serif; /* Cartoonish font */
+}
+/* Adding margin to the left div for better spacing */
+.left {
+    padding-left: 40px; /* Add some padding on the left side */
+    margin-top: 20px; /* Add margin from the top to balance the alignment */
+    margin-bottom: 20px; /* Add margin from the bottom for consistency */
+}
+
+.content {
+    padding-right: 20px; /* Add some padding on the right side */
+}
+
+/* Blending the image with the background */
+/* Reduce the border-radius of the image to prevent scrolling */
+.right img {
+    border-radius: 40%; /* Reduced from 50% for a less rounded effect */
+    max-width: 75%; /* Ensure the image fits within the container */
+    height: 90%; /* Maintain aspect ratio */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Keep the soft shadow */
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+
+/* Change color of headings and paragraphs */
+.title {
+    color: #ff6f61; /* Soft red for cartoonish look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Light text shadow for a 3D effect */
+}
+
+.subtitle {
+    color: #ff9800; /* Orange subtitle */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+p {
+    color: #333; /* Darker text to contrast with background */
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Cartoonish button style */
+.btn-cv {
+    background-color: #ff6f61; /* Matching button color */
+    color: white;
+    border-radius: 20px; /* Rounded corners for a playful feel */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Cartoonish shadow */
+    transition: transform 0.3s;
+}
+
+.btn-cv:hover {
+    transform: scale(1.1); /* Button grows slightly on hover */
+}
+
+/* Social Icons Diagonal Layout for Desktop */
+.social {
+    display: flex;
+    flex-direction: column; /* Stack vertically first */
+    align-items: flex-start; /* Align them to the left */
+    position: relative;
+}
+
+.social li {
+    position: absolute;
+    transform: rotate(-45deg); /* Rotate each item */
+    list-style: none; /* Remove bullet points */
+}
+
+.social li:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.social li:nth-child(2) {
+    top: 40px;
+    left: 40px;
+}
+
+.social li:nth-child(3) {
+    top: 80px;
+    left: 80px;
+}
+
+.social li:nth-child(4) {
+    top: 120px;
+    left: 120px;
+}
+
+.social li a {
+    display: inline-block;
+    font-size: 2rem; /* Adjust size as needed */
+    color: #ffffff; /* White by default */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add hover transitions */
+}
+
+.social li a:hover {
+    color: #ff6f61; /* Change color to orange on hover */
+    transform: rotate(0deg); /* Reset rotation on hover for effect */
+}
+
+/* Responsive adjustments for tablet and mobile */
+@media (max-width: 1024px) {
+    .social {
+        position: static; /* Remove absolute positioning for mobile/tablet */
+        display: flex;
+        flex-direction: row; /* Display icons in a row */
+        justify-content: space-around; /* Space out icons evenly */
+    }
+
+    .social li {
+        position: static;
+        transform: none; /* Remove rotation on smaller screens */
+        margin-right: 10px;
+    }
+
+    .social li a {
+        font-size: 1.5rem; /* Slightly smaller icons for mobile/tablet */
+    }
+}
+
+/* Further adjustments for smaller mobile screens */
+@media (max-width: 768px) {
+    .social {
+        flex-direction: row; /* Stack items horizontally for small screens */
+        justify-content: space-around; /* Spread out evenly */
+    }
+
+    .social li {
+        transform: none; /* Remove rotation */
+        position: static; /* Standard position on mobile */
+    }
+
+    .social li a {
+        font-size: 1.2rem; /* Reduce size slightly on small mobile screens */
+    }
+}
+
+
+/* Navbar color adjustment */
+.navbar {
+    background-color: #000000; /* Black background */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff; /* White text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    color: #ff6f61; /* Orange color on hover */
+}
+
+/* If the navbar has a toggler (for mobile views), set the toggler color as well */
+.navbar-toggler {
+    background-color: #ffffff; /* White color for the toggler icon */
+}
+
+.navbar-toggler-icon {
+    color: #000000; /* Black color for the toggler icon */
+}
+
+
+.gradient {
+    background: linear-gradient(to right, #1e3c72, #7299dc);
+}
+
+/* Bento Grid Layout for Desktop */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns for desktop */
+    grid-auto-rows: minmax(200px, auto); /* Automatic height for rows */
+    gap: 20px; /* Space between the boxes */
+    margin-top: 20px;
+}
+
+.bento-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Black background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    color: #ffffff; /* White text color */
+}
+
+/* Styling for headings inside bento boxes */
+.bento-box h4 {
+    color: #ff6f61; /* Orange color for headings */
+}
+
+/* Styling for list items and paragraphs */
+.bento-box ul li, .bento-box p {
+    color: #ffffff; /* White color for list items and text */
+}
+
+/* Icon color */
+.bento-box ul li i {
+    color: #ff6f61; /* Orange for icons */
+}
+
+/* Hover effect on bento boxes */
+.bento-box:hover {
+    transform: scale(1.05);
+}
+
+/* Specific sizes for some boxes to create a dynamic layout on desktop */
+.bento-box:nth-child(1) {
+    grid-column: span 2; /* Takes up 2 columns in width */
+}
+
+.bento-box:nth-child(2) {
+    grid-row: span 2; /* Takes up 2 rows in height */
+}
+
+.bento-box:nth-child(3) {
+    grid-column: span 1; /* Regular size */
+}
+
+.bento-box:nth-child(4) {
+    grid-column: span 2; /* Takes up 2 columns in width */
+}
+
+.bento-box:nth-child(5) {
+    grid-row: span 2; /* Takes up 2 rows in height */
+}
+
+.bento-box:nth-child(6) {
+    grid-column: span 1; /* Regular size */
+}
+
+.bento-box:nth-child(7) {
+    grid-column: span 1; /* Regular size */
+}
+
+.bento-box:nth-child(8) {
+    grid-column: span 1; /* Takes up 2 columns in width */
+}
+
+/* Tablet and Mobile View: Card List Layout */
+@media (max-width: 1024px) {
+    .bento-grid {
+        display: block; /* Remove grid layout */
+    }
+
+    .bento-box {
+        width: 100%;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        display: block; /* Switch to card list layout */
+    }
+
+    .bento-box {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+}
+/* Style the form input fields and text area */
+.form-control {
+    background-color: #000000; /* Black background for input and textarea */
+    color: #ffffff; /* White text color inside the inputs */
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 5px; /* Slight rounding of the corners */
+    padding: 10px; /* Add some padding for better readability */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Placeholder text styling (if needed) */
+.form-control::placeholder {
+    color: #bbbbbb; /* Grey placeholder text */
+}
+
+/* Focus state for inputs and text areas */
+.form-control:focus {
+    background-color: #333333; /* Slightly lighter black on focus */
+    color: #ffffff; /* Keep white text on focus */
+    border-color: #ff6f61; /* Orange border on focus to match theme */
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Add a slight shadow on focus */
+}
+
+/* Autofill styling to prevent color change */
+input:-webkit-autofill, 
+textarea:-webkit-autofill {
+    background-color: #000000 !important; /* Black background */
+    color: #ffffff !important; /* White text */
+    -webkit-box-shadow: 0 0 0 30px #000000 inset !important; /* Prevent background color change on autofill */
+    -webkit-text-fill-color: #ffffff !important; /* Ensure white text color */
+}
+
+input:-moz-autofill, 
+textarea:-moz-autofill {
+    background-color: #000000 !important; /* Black background */
+    color: #ffffff !important; /* White text */
+}
